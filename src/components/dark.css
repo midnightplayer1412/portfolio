@@ -1,0 +1,33 @@
+:root{
+    --root-background-color: #1a1a1a;
+    --root-color: white;
+    --album-background-color: white;
+    --bar-background: white;
+    --show-content-color: white;
+    --content-bg-border: rgba(255, 255, 255, 0.5) 1px solid;
+    --content-bg-background-color: rgba(0,0,0,1);
+    --esc-title-color: white;
+    --square1-background-color: rgba(255, 255, 255, 1);
+    --square1-hover: rgba(255, 255, 255, 0.2);
+    --square1-hover-border: rgba(255, 255, 255, 0.5) 1px solid;
+    --square2-border: rgba(255, 255, 255, 0.5) solid 1px;
+    --square3-background-color: rgba(255, 255, 255, 0.5);
+    --title-box1-background-color: white;
+    --title-box1-color: black;
+    --title-box2-border: rgba(255, 255, 255, 1) 1px solid;
+    --navbar-bg-hover: rgba(0, 0, 0, 0.5);
+    --nav-active-background-color: rgba(0, 0, 0, 1);
+    --parallelogram-background: rgba(255, 255, 255, 0.5);
+    --int-proj-cont-color: white;
+    --download-pdf-border: rgba(255, 255, 255, 0.5) 1px solid;
+    --download-pdf-color: white;
+    --project-details-border: rgba(255, 255, 255, 0.5) 1px solid;
+    --project-details-color: white;
+    --project-details-background-color: #252525;
+    --project-details-hover: rgba(255, 255, 255, 0.5);
+    --project-title-background-color: rgba(0, 0, 0, 0.5);
+    --project-title-color: white;
+    --email-phone-color: white;
+    --contact-title-border: rgba(255, 255, 255, 0.5) 1px solid;
+    --volume-content-background-color: rgba(255, 255, 255, 0.5);
+  }

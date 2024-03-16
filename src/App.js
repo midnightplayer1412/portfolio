@@ -2,6 +2,7 @@ import { useState } from 'react';
 import BackgroundMusic from './components/BackgroundMusic';
 import SoundWave from './components/SoundWave';
 import Content from './components/Content';
+import './components/light.css';
 import './App.css';
 
 function Album({ muted, toggleViewContent }) {

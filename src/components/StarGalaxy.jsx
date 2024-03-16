@@ -5,7 +5,7 @@ const StarGalaxy = () => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  const starCount = 500;
+  const starCount = 1000;
   const boxShadowStyles = useMemo(() => {
     let styles = '';
 

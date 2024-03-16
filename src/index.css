@@ -24,11 +24,11 @@ code {
   width: 1px;
   background-color: #fff;
   border-radius: 50%;
-  animation: star-zoom 60s linear infinite;
+  animation: star-rotate 120s linear infinite;
 
 }
 
-@keyframes star-zoom {
+@keyframes star-rotate {
   0%{
     transform: rotate(0deg);
   }

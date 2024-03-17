@@ -412,7 +412,7 @@
   align-items: center;
 }
 
-.project-details:hover::after{
+/* .project-details:hover::after{
   display: flex;
   background-color: var(--project-details-hover);
   height:30%;
@@ -420,7 +420,7 @@
   align-items: center;
   content: '';
   animation: displayContent 0.5s ease-out;
-}
+} */
 
 @keyframes displayContent {
   0%{

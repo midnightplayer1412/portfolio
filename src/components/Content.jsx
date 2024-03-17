@@ -116,8 +116,8 @@ function Content({viewContent, onClose}) {
     const navbarItems = document.querySelectorAll('.navbar-list .navbar-bg');
 
     navbarItems.forEach((item, index) => {
-      const leftValue = index * 38;
-      item.style.left = leftValue - 16 + 'px';
+      const leftValue = index * 8.5;
+      item.style.left = leftValue - 3.5 + '%';
     });
 
     // Add event listener to the document object

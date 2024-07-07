@@ -2,8 +2,10 @@ import { useState } from 'react';
 import BackgroundMusic from './components/BackgroundMusic';
 import SoundWave from './components/SoundWave';
 import Content from './components/Content';
-import './components/dark.css';
+import {ThemeProvider, ThemeComponent} from './components/ThemeProvider';
 import './App.css';
+import './components/light.css';
+import './components/dark.css';
 
 function Album({ muted, toggleViewContent }) {
   const showContentHandler = () => {
@@ -33,14 +35,30 @@ function App() {
     setViewContent((prevState) => !prevState);
   };
 
+  // const SomeComponent = () => {
+  //   const { isDarkMode, setIsDarkMode } = useContext(ThemeContext);
+  
+  //   return (
+  //     <div>
+  //       <p>Current theme: {isDarkMode ? 'Dark' : 'Light'}</p>
+  //       <button onClick={() => setIsDarkMode(!isDarkMode)}>
+  //         Toggle Theme
+  //       </button>
+  //     </div>
+  //   );
+  // };
+
   return (
     <>
+    <ThemeProvider>
       <div className="main">
+        <ThemeComponent/>
         <BackgroundMusic onMuteChange={handleMuteChange} />
         <SoundWave muted={muted} />
         <Album muted={muted} toggleViewContent={toggleViewContent} />
         {viewContent && <Content viewContent={viewContent} onClose={() => setViewContent(false)} />}
       </div>
+    </ThemeProvider>
     </>
   );
 }

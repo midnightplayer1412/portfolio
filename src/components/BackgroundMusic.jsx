@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import ReactHowler from 'react-howler';
 import backgroundMusic from '../audio/music.mp3';
 
 const BackgroundMusic = ({onMuteChange}) => {
   const [volume, setVolume] = useState(0.3);
   const [muted, setMuted] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   const handleVolumeChange = (event) => {
     console.log(event.target.value);
-    if(event.target.value == 0){
+    if(event.target.value === 0){
       onMuteChange(true);
       setMuted(true);
       setVolume(event.target.value);
@@ -26,6 +27,11 @@ const BackgroundMusic = ({onMuteChange}) => {
     // console.log("Muted: ", muted);
   };
 
+  const handleLoadError = (id, err) => {
+    console.error('Error Loading Audio: ', err);
+    // console.log(backgroundMusic);
+  };
+
   return (
     <>
     <div className='volume-content'>
@@ -35,6 +41,8 @@ const BackgroundMusic = ({onMuteChange}) => {
         volume={muted ? 0 : volume}
         loop={true}
         preload={true}
+        onLoad={()=>setLoaded(true)}
+        onLoadError={handleLoadError}
       />
     <label class="slider">
       <input 

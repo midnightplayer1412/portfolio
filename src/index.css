@@ -1,10 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+/* :root{
+  --root-star-color: black;
+  --root-background-color: #e6e6e6;
+  --root-color: black;
+  --album-background-color: white;
+  --bar-background: black;
+  --show-content-color: black;
+  --content-bg-border: rgba(0, 0, 0, 0.5) 1px solid;
+  --content-bg-background-color: rgba(255, 255, 255,1);
+  --esc-title-color: black;
+  --square1-background-color: rgba(0, 0, 0, 1);
+  --square1-hover: rgba(0, 0, 0, 0.2);
+  --square1-hover-border: rgba(0, 0, 0, 0.5) 1px solid;
+  --square2-border: rgba(0, 0, 0, 0.5) solid 1px;
+  --square3-background-color: rgba(0, 0, 0, 0.5);
+  --title-box1-background-color: black;
+  --title-box1-color: white;
+  --title-box2-border: rgba(0, 0, 0, 1) 1px solid;
+  --navbar-bg-hover: rgba(255, 255, 255, 0.5);
+  --nav-active-background-color: rgba(255, 255, 255, 1);
+  --parallelogram-background: rgba(0, 0, 0, 0.5);
+  --int-proj-cont-color: black;
+  --download-pdf-border: rgba(0, 0, 0, 0.5) 1px solid;
+  --download-pdf-color: black;
+  --project-details-border: rgba(0, 0, 0, 0.5) 1px solid;
+  --project-details-color: black;
+  --project-details-background-color: #d9d9d9;
+  --project-details-hover: rgba(0, 0, 0, 0.5);
+  --project-title-background-color: rgba(255, 255, 255, 0.5);
+  --project-title-color: black;
+  --email-phone-color: black;
+  --contact-title-border: rgba(0, 0, 0, 0.5) 1px solid;
+  --volume-content-background-color: rgba(255, 255, 255, 0.5);
+} */
+
+/* Default Light Theme */
+.light-theme{
+  --root-star-color: black;
+  --root-background-color: #e6e6e6;
+  --root-color: black;
+  --theme-border-color: black;
+  --album-background-color: white;
+  --bar-background: black;
+  --show-content-color: black;
+  --content-bg-border: rgba(0, 0, 0, 0.5) 1px solid;
+  --content-bg-background-color: rgba(255, 255, 255,1);
+  --esc-title-color: black;
+  --square1-background-color: rgba(0, 0, 0, 1);
+  --square1-hover: rgba(0, 0, 0, 0.2);
+  --square1-hover-border: rgba(0, 0, 0, 0.5) 1px solid;
+  --square2-border: rgba(0, 0, 0, 0.5) solid 1px;
+  --square3-background-color: rgba(0, 0, 0, 0.5);
+  --title-box1-background-color: black;
+  --title-box1-color: white;
+  --title-box2-border: rgba(0, 0, 0, 1) 1px solid;
+  --navbar-bg-hover: rgba(255, 255, 255, 0.5);
+  --nav-active-background-color: rgba(255, 255, 255, 1);
+  --parallelogram-background: rgba(0, 0, 0, 0.5);
+  --int-proj-cont-color: black;
+  --download-pdf-border: rgba(0, 0, 0, 0.5) 1px solid;
+  --download-pdf-color: black;
+  --project-details-border: rgba(0, 0, 0, 0.5) 1px solid;
+  --project-details-color: black;
+  --project-details-background-color: #d9d9d9;
+  --project-details-hover: rgba(0, 0, 0, 0.5);
+  --project-title-background-color: rgba(255, 255, 255, 0.5);
+  --project-title-color: black;
+  --email-phone-color: black;
+  --contact-title-border: rgba(0, 0, 0, 0.5) 1px solid;
+  --volume-content-background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme{
+  --root-star-color: white;
+  --root-background-color: #1a1a1a;
+  --root-color: white;
+  --theme-border-color: white;
+  --album-background-color: white;
+  --bar-background: white;
+  --show-content-color: white;
+  --content-bg-border: rgba(255, 255, 255, 0.5) 1px solid;
+  --content-bg-background-color: rgba(0,0,0,1);
+  --esc-title-color: white;
+  --square1-background-color: rgba(255, 255, 255, 1);
+  --square1-hover: rgba(255, 255, 255, 0.2);
+  --square1-hover-border: rgba(255, 255, 255, 0.5) 1px solid;
+  --square2-border: rgba(255, 255, 255, 0.5) solid 1px;
+  --square3-background-color: rgba(255, 255, 255, 0.5);
+  --title-box1-background-color: white;
+  --title-box1-color: black;
+  --title-box2-border: rgba(255, 255, 255, 1) 1px solid;
+  --navbar-bg-hover: rgba(0, 0, 0, 0.5);
+  --nav-active-background-color: rgba(0, 0, 0, 1);
+  --parallelogram-background: rgba(255, 255, 255, 0.5);
+  --int-proj-cont-color: white;
+  --download-pdf-border: rgba(255, 255, 255, 0.5) 1px solid;
+  --download-pdf-color: white;
+  --project-details-border: rgba(255, 255, 255, 0.5) 1px solid;
+  --project-details-color: white;
+  --project-details-background-color: #252525;
+  --project-details-hover: rgba(255, 255, 255, 0.5);
+  --project-title-background-color: rgba(0, 0, 0, 0.5);
+  --project-title-color: white;
+  --email-phone-color: white;
+  --contact-title-border: rgba(255, 255, 255, 0.5) 1px solid;
+  --volume-content-background-color: rgba(255, 255, 255, 0.5);
+}
+
+* {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Orbitron',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 code {
@@ -25,7 +140,7 @@ code {
   background-color: #fff;
   border-radius: 50%;
   animation: star-rotate 120s linear infinite;
-
+  color: var(--root-star-color);
 }
 
 @keyframes star-rotate {

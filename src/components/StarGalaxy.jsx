@@ -10,7 +10,7 @@ const StarGalaxy = () => {
     let styles = '';
 
     for (let i = 0; i < starCount; i++) {
-      styles += `${randomNumber(-100, 100)}vw ${randomNumber(-100, 100)}vh ${randomNumber(0, 3)}px ${randomNumber(0, 3)}px #fff, `;
+      styles += `${randomNumber(-100, 100)}vw ${randomNumber(-100, 100)}vh ${randomNumber(0, 3)}px ${randomNumber(0, 3)}px, `;
     }
 
     return styles.substring(0, styles.length - 2);
@@ -18,6 +18,7 @@ const StarGalaxy = () => {
 
   const starStyle = {
     boxShadow: boxShadowStyles,
+    color: '--root-star-color'
   };
 
   return (

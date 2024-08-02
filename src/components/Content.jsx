@@ -167,9 +167,11 @@ function Content({viewContent, onClose}) {
               </div>
             </div>
           </div>
-          {contentPage === 'Introduction' && <Introduction />}
-          {contentPage === 'Project' && <Project />}
-          {contentPage === 'Contact' && <Contact />}
+          <div className="content">
+            {contentPage === 'Introduction' && <Introduction />}
+            {contentPage === 'Project' && <Project />}
+            {contentPage === 'Contact' && <Contact />}
+          </div>
         </div>
       </div>
     </>

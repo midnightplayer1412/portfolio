@@ -4,8 +4,8 @@ import SoundWave from './components/SoundWave';
 import Content from './components/Content';
 import {ThemeProvider, ThemeComponent} from './components/ThemeProvider';
 import './App.css';
-import './components/light.css';
-import './components/dark.css';
+// import './components/light.css';
+// import './components/dark.css';
 
 function Album({ muted, toggleViewContent }) {
   const showContentHandler = () => {
@@ -50,7 +50,6 @@ function App() {
 
   return (
     <>
-    <ThemeProvider>
       <div className="main">
         <ThemeComponent/>
         <BackgroundMusic onMuteChange={handleMuteChange} />
@@ -58,7 +57,6 @@ function App() {
         <Album muted={muted} toggleViewContent={toggleViewContent} />
         {viewContent && <Content viewContent={viewContent} onClose={() => setViewContent(false)} />}
       </div>
-    </ThemeProvider>
     </>
   );
 }

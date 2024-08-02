@@ -70,6 +70,8 @@
   --email-phone-color: black;
   --contact-title-border: rgba(0, 0, 0, 0.5) 1px solid;
   --volume-content-background-color: rgba(255, 255, 255, 0.5);
+  --loading-screen-background-color: white;
+  --loading-screen-loader: black;
 }
 
 .dark-theme{
@@ -106,10 +108,12 @@
   --email-phone-color: white;
   --contact-title-border: rgba(255, 255, 255, 0.5) 1px solid;
   --volume-content-background-color: rgba(255, 255, 255, 0.5);
+  --loading-screen-background-color: black;
+  --loading-screen-loader: white;
 }
 
 * {
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color 0.5s ease, color 0.2s ease;
 }
 
 body {
@@ -150,4 +154,61 @@ code {
   100%{
     transform: rotate(360deg);
   }
+}
+
+/* 
+====================================================
+  Loading Screen
+==================================================== */
+.loading-screen {
+  background-color: var(--root-background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: auto;
+  font-weight: bold;
+  font-family: 'Orbitron';
+  font-size: 30px;
+}
+.loader:before {
+  content:"Loading ..."
+}
+
+.loading-progress {
+  font-weight: bold;
+  font-family: 'Orbitron';
+}
+
+.play-button {
+  border: 1px solid var(--theme-border-color);
+  /* background-color: red; */
+  font-family: 'Orbitron';
+  position: relative;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  animation: showButton 1.5s ease;
+}
+
+@keyframes showButton {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100%;
+  }
+  
+}
+
+.play-button:hover {
+  background-color: var(--root-color);
+  color: var(--root-background-color);
+  cursor: pointer;
 }

@@ -96,8 +96,8 @@
     }
   }
 
-  .album-disc{
-    animation: showdisc 1.5s linear, spindisc 2s linear infinite;
+  .album-disc {
+    animation: showdisc 1.5s linear, spindisc 5s linear infinite;
     position: relative;
     width: 95%;
     height: 95%;
@@ -106,6 +106,18 @@
     background-position: center;
     background-size: cover;
     z-index: -1;
+    display: flex;
+    align-items: center;
+  }
+
+  .album-disc::before {
+    content: '雨上がりの午後 @ フリーBGM DOVA-SYNDROME OFFICIAL YouTube CHANNEL';
+    position: absolute;
+    width: 30%;
+    display: inline-block;
+    font-size: xx-small;
+    right: 3%;
+    color: white;
   }
 
   /* 
@@ -539,7 +551,7 @@
     --level-transition-duration: .1s;
     /* icon */
     --icon-margin: 15px;
-    --icon-color: var(--slider-bg);
+    --icon-color: black;
     --icon-size: 25px;
   }
 
@@ -564,6 +576,11 @@
     color: var(--icon-color);
     width: var(--icon-size);
     height: auto;
+  }
+
+  .play-pause {
+    margin-right: var(--icon-margin);
+    color: var(--icon-color);
   }
 
   .slider .level {

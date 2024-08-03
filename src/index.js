@@ -16,7 +16,8 @@ const MainContent = () => (
 );
 
 const RootComponent = () => {
-  const [isLoadingComplete, setIsLoadingComplete] = useState(false);
+  // const [isLoadingComplete, setIsLoadingComplete] = useState(false);
+  const [isLoadingComplete, setIsLoadingComplete] = useState(true);
   console.log("isLoadingComplete is : ", isLoadingComplete)
   const handleLoadingComplete = () => {
     setIsLoadingComplete(true);

@@ -7,10 +7,10 @@ function Introduction(){
         <div className='introduction'>
           <div className='intro-content'>
             <div className="intro-details">
-            Enthusiastic Computer Science student specializing in Artificial Intelligence, currently pursuing a Bachelor's degree. 
+            Recent Computer Science graduate with a strong foundation in Artificial Intelligence and Machine Learning.  
             </div>
             <div className="intro-details">
-            Eager to apply theoretical knowledge and gain practical experience in Machine Learning engineering and Artificial Intelligence development. 
+            Eager to apply leverage academic knowledge in real-world applications and contribute to innovative tech solutions. 
             </div>
             <div className="intro-details">
             Passionate about leveraging technology to solve complex problems and contribute to innovative projects.
@@ -117,7 +117,7 @@ function Content({viewContent, onClose}) {
 
     navbarItems.forEach((item, index) => {
       const leftValue = index * 8.5;
-      item.style.left = leftValue - 3.5 + '%';
+      item.style.left = leftValue - 1 + '%';
     });
 
     // Add event listener to the document object
@@ -148,8 +148,8 @@ function Content({viewContent, onClose}) {
             <div className="square3"></div>
           </div>
           <div className='navbar'>
+            <div className='parallelogram'></div>
             <div className='navbar-content'>
-              <div className='parallelogram'></div>
               <div className='navbar-title'>
                 <div className="title-box1">PON YU XUAN</div>
                 <div className="title-box2"></div>

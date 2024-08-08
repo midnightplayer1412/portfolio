@@ -2,6 +2,7 @@ import { useState } from 'react';
 import BackgroundMusic from './components/BackgroundMusic';
 import SoundWave from './components/SoundWave';
 import Content from './components/Content';
+import MobileNavbar from './components/MobileView';
 import {ThemeComponent} from './components/ThemeProvider';
 import './App.css';
 // import './components/light.css';
@@ -51,12 +52,15 @@ function App() {
 
   return (
     <>
-      <div className="main">
+      <div className="main-desktop">
         <ThemeComponent/>
         <BackgroundMusic onPauseChange={handlePauseToggle} />
         <SoundWave paused={paused} />
         <Album paused={paused} toggleViewContent={toggleViewContent} />
         {viewContent && <Content viewContent={viewContent} onClose={() => setViewContent(false)} />}
+      </div>
+      <div className="main-mobile">
+        <MobileNavbar/>
       </div>
     </>
   );

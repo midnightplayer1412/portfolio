@@ -4,6 +4,70 @@
   --navbar-width: 100%;
 }
 
+@media only screen and (max-width: 1200px) {
+  .main-desktop {
+    display: none;
+  }
+
+  .main-mobile {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .star {
+    display: none;
+  }
+
+  .navbar-mobile-bg {
+    background-color: var(--navbar-bg-hover);
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    top: 90%;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .navbar-mobile > .home, .music, .favor, .contact {
+    color: white;
+    align-items: center;
+  }
+
+  .navbar-mobile > .active {
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+  }
+
+  .content-mobile-bg {
+    background-color: var(--root-background-color);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .notice {
+    color: var(--root-color);
+    font-family: 'Orbitron';
+    font-size: large;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 @media only screen and (min-width: 1200px){
 
   #root{
@@ -30,7 +94,7 @@
     cursor: pointer;
   }
 
-  .main{
+  .main-desktop{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,7 +102,10 @@
     width: 100%;
     z-index: 0;
     animation: fadeIn 2s ease-in;
+  }
 
+  .main-mobile {
+    display: none;
   }
 
   @keyframes fadeIn {
@@ -223,7 +290,7 @@
   .navbar{
     font-family: 'Orbitron';
     display: flex;
-    /* width: var(--navbar-width); */
+    width: 40%;
     margin: 20px;
   }
 
@@ -303,13 +370,15 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    height: 20%;
+    width: 100%;
   }
 
   .title-box1{
     position: relative;
     background-color: var(--title-box1-background-color);
     width: 100%;
-    height: 60px;
+    height: 100%;
     z-index: 1;
     color: var(--title-box1-color);
     display: flex;
@@ -321,9 +390,9 @@
     position: relative;
     border: var(--title-box2-border);
     width: 100%;
-    height: 60px;
-    bottom: 50px;
-    left: 10px;
+    height: 100%;
+    left: 2%;
+    bottom: 40%;
   }
 
   .navbar-list{
@@ -353,7 +422,7 @@
     position: relative;
     font-size: 2vw;
     width: 100%;
-    height: 100px;
+    height: 13vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -362,12 +431,14 @@
 
   .parallelogram {
     width: 40vw;
-    height: 100%;
+    height: 100vh;
     clip-path: polygon(0% 0%, 50% 0%, 100% 100%, 50% 100%);
     background: var(--parallelogram-background);
     position: absolute;
     top: 0;
     left: 0;
+    /* transform: skeX(20deg); */
+    z-index: 0;
   }
 
   .content {
@@ -438,7 +509,7 @@
 
   .project-details{
     width: 21vw;
-    min-height: 200px;
+    height: 70%;
     border: var(--project-details-border);
     display: flex;
     justify-content: space-between;

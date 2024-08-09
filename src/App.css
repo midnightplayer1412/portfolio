@@ -2,7 +2,70 @@
 
 :root{
   --navbar-width: 100%;
-  /* --nav */
+}
+
+@media only screen and (max-width: 1200px) {
+  .main-desktop {
+    display: none;
+  }
+
+  .main-mobile {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .star {
+    display: none;
+  }
+
+  .navbar-mobile-bg {
+    background-color: var(--navbar-bg-hover);
+    width: 100vw;
+    height: 10vh;
+    position: relative;
+    top: 90%;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-mobile {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .navbar-mobile > .home, .music, .favor, .contact {
+    color: white;
+    align-items: center;
+  }
+
+  .navbar-mobile > .active {
+    border-bottom: 3px solid white;
+    padding-bottom: 5px;
+  }
+
+  .content-mobile-bg {
+    background-color: var(--root-background-color);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+  }
+
+  .notice {
+    color: var(--root-color);
+    font-family: 'Orbitron';
+    font-size: large;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media only screen and (min-width: 1200px){
@@ -28,15 +91,21 @@
     justify-content: center;
     align-items: center;
     font-family: 'Orbitron';
+    cursor: pointer;
   }
 
-  .main{
+  .main-desktop{
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
     width: 100%;
     z-index: 0;
+    animation: fadeIn 2s ease-in;
+  }
+
+  .main-mobile {
+    display: none;
   }
 
   @keyframes fadeIn {
@@ -62,6 +131,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   .album-cover{
@@ -93,8 +163,8 @@
     }
   }
 
-  .album-disc{
-    animation: showdisc 1.5s linear, spindisc 2s linear infinite;
+  .album-disc {
+    animation: showdisc 1.5s linear, spindisc 5s linear infinite;
     position: relative;
     width: 95%;
     height: 95%;
@@ -103,6 +173,18 @@
     background-position: center;
     background-size: cover;
     z-index: -1;
+    display: flex;
+    align-items: center;
+  }
+
+  .album-disc::before {
+    content: '雨上がりの午後 @ フリーBGM DOVA-SYNDROME OFFICIAL YouTube CHANNEL';
+    position: absolute;
+    width: 30%;
+    display: inline-block;
+    font-size: xx-small;
+    right: 3%;
+    color: white;
   }
 
   /* 
@@ -202,13 +284,13 @@
     width: 90%;
     height: 90%;
     display: flex;
-    flex-direction: row-reverse;
+    /* flex-direction: row-reverse; */
   }
 
   .navbar{
     font-family: 'Orbitron';
     display: flex;
-    width: var(--navbar-width);
+    width: 40%;
     margin: 20px;
   }
 
@@ -226,6 +308,7 @@
     right: 5%;
     transform: rotate(315deg);
     z-index: 1;
+    cursor: pointer;
   }
 
   .esc-title{
@@ -287,13 +370,15 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    height: 20%;
+    width: 100%;
   }
 
   .title-box1{
     position: relative;
     background-color: var(--title-box1-background-color);
     width: 100%;
-    height: 60px;
+    height: 100%;
     z-index: 1;
     color: var(--title-box1-color);
     display: flex;
@@ -305,9 +390,9 @@
     position: relative;
     border: var(--title-box2-border);
     width: 100%;
-    height: 60px;
-    bottom: 50px;
-    left: 10px;
+    height: 100%;
+    left: 2%;
+    bottom: 40%;
   }
 
   .navbar-list{
@@ -337,27 +422,37 @@
     position: relative;
     font-size: 2vw;
     width: 100%;
-    height: 100px;
+    height: 13vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
 
   .parallelogram {
     width: 40vw;
-    height: 100%;
+    height: 100vh;
     clip-path: polygon(0% 0%, 50% 0%, 100% 100%, 50% 100%);
     background: var(--parallelogram-background);
     position: absolute;
     top: 0;
     left: 0;
+    /* transform: skeX(20deg); */
+    z-index: 0;
+  }
+
+  .content {
+    display: flex;
+    /* justify-content: center; */
+    /* background-color: red; */
+    width: 100%;
   }
 
   .introduction, .project, .contact{
     color: var(--int-proj-cont-color);
-    position: absolute;
-    width: 50%;
-    height: 90%;
+    /* position: absolute; */
+    width: 100%;
+    /* height: 90%; */
     font-size: 1.5rem;
   }
 
@@ -396,7 +491,7 @@
     Project
   ==================================================== */
   .project-container{
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -408,13 +503,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     height: 100%;
   }
 
   .project-details{
     width: 21vw;
-    min-height: 200px;
+    height: 70%;
     border: var(--project-details-border);
     display: flex;
     justify-content: space-between;
@@ -459,7 +554,7 @@
   .project-title{
     background-color: var(--project-title-background-color);
     width: 100%;
-    height: fit-content;
+    height: auto;
     text-align: center;
     color: var(--project-title-color)
   }
@@ -469,14 +564,15 @@
     Contact
   ==================================================== */
   .contact-details{
-    width: 80%;
+    width: 100%;
     height: 100%;
     text-align: start;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 15%;
     flex-direction: column;
-    position: relative;
-    right: 10%;
+    /* position: relative;
+    right: 10%; */
   }
 
   .email, .phone-no{
@@ -526,7 +622,7 @@
     --level-transition-duration: .1s;
     /* icon */
     --icon-margin: 15px;
-    --icon-color: var(--slider-bg);
+    --icon-color: black;
     --icon-size: 25px;
   }
 
@@ -551,6 +647,11 @@
     color: var(--icon-color);
     width: var(--icon-size);
     height: auto;
+  }
+
+  .play-pause {
+    margin-right: var(--icon-margin);
+    color: var(--icon-color);
   }
 
   .slider .level {

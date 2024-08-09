@@ -2,12 +2,13 @@ import { useState } from 'react';
 import BackgroundMusic from './components/BackgroundMusic';
 import SoundWave from './components/SoundWave';
 import Content from './components/Content';
-import {ThemeProvider, ThemeComponent} from './components/ThemeProvider';
+import MobileNavbar from './components/MobileView';
+import {ThemeComponent} from './components/ThemeProvider';
 import './App.css';
-import './components/light.css';
-import './components/dark.css';
+// import './components/light.css';
+// import './components/dark.css';
 
-function Album({ muted, toggleViewContent }) {
+function Album({ paused, toggleViewContent }) {
   const showContentHandler = () => {
     toggleViewContent();
   };
@@ -15,7 +16,7 @@ function Album({ muted, toggleViewContent }) {
     <>
        <div className='album' onClick={showContentHandler}>
            <div className='album-cover'>
-             <div className='album-disc' style={{animationPlayState: muted ? 'paused' : 'running'}}>
+             <div className='album-disc' style={{animationPlayState: paused ? 'paused' : 'running'}}>
              </div>
            </div>
        </div>
@@ -26,9 +27,10 @@ function Album({ muted, toggleViewContent }) {
 function App() {
   const [muted, setMuted] = useState(false);
   const [viewContent, setViewContent] = useState(false);
+  const [paused, setPaused] = useState(false);
 
-  const handleMuteChange = (newMutedState) => {
-    setMuted(newMutedState);
+  const handlePauseToggle = () => {
+    setPaused(!paused);
   };
 
   const toggleViewContent = () => {
@@ -50,15 +52,16 @@ function App() {
 
   return (
     <>
-    <ThemeProvider>
-      <div className="main">
+      <div className="main-desktop">
         <ThemeComponent/>
-        <BackgroundMusic onMuteChange={handleMuteChange} />
-        <SoundWave muted={muted} />
-        <Album muted={muted} toggleViewContent={toggleViewContent} />
+        <BackgroundMusic onPauseChange={handlePauseToggle} />
+        <SoundWave paused={paused} />
+        <Album paused={paused} toggleViewContent={toggleViewContent} />
         {viewContent && <Content viewContent={viewContent} onClose={() => setViewContent(false)} />}
       </div>
-    </ThemeProvider>
+      <div className="main-mobile">
+        <MobileNavbar/>
+      </div>
     </>
   );
 }
